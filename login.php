@@ -74,8 +74,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 <input type="password" class="form-control" id="pass" name="password">
             </div>
         </div>
-        <input type="submit">
-        <input type="reset">
+        <button type="submit" class="btn btn-success">Se connecter</button>
+        <button type="reset" class="btn btn-danger">Effacer</button>
+        
     </form>
     <?php
     if ($erreurLog != false) {

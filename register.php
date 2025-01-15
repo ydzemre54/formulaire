@@ -79,8 +79,8 @@ if (isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['password']))
                 <input type="password" class="form-control" id="password" name="password">
             </div>
         </div>
-        <input type="submit">
-        <input type="reset">
+        <button type="submit" class="btn btn-success">Se connecter</button>
+        <button type="reset" class="btn btn-danger">Effacer</button>
 
     </form>
 
