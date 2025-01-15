@@ -52,7 +52,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             border-radius: 10px;
         }
 
-        #err{
+        #err {
             margin-top: 20px;
         }
     </style>
@@ -76,8 +76,11 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         </div>
         <button type="submit" class="btn btn-success">Se connecter</button>
         <button type="reset" class="btn btn-danger">Effacer</button>
-        
+
     </form>
+    <br>
+    <a href="index.php"><button type="button" class="btn btn-danger">retour</button></a>
+    </div>
     <?php
     if ($erreurLog != false) {
     ?>

@@ -8,19 +8,19 @@ if (isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['password']))
     $username = $_POST['username'];
 
     $dbh = new PDO($dsn, $user, '');
-    $sql='INSERT INTO utilisateurs(nom_utilisateur, email_utilisateur, mot_de_passe,username) VALUES(:nom, :email, :password,:username)';
-    $query = $dbh -> prepare($sql);
-    $query -> execute([
-        'nom'=>$nom,
-        'email'=>$email,
-        'password'=>$password,
-        'username'=>$username,
+    $sql = 'INSERT INTO utilisateurs(nom_utilisateur, email_utilisateur, mot_de_passe,username) VALUES(:nom, :email, :password,:username)';
+    $query = $dbh->prepare($sql);
+    $query->execute([
+        'nom' => $nom,
+        'email' => $email,
+        'password' => $password,
+        'username' => $username,
     ]);
 
     header('location: login.php');
 }
-    
-     ?>
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +38,7 @@ if (isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['password']))
             background-color: rgb(170, 170, 170);
         }
 
-        form{
+        form {
             font-weight: bold;
             margin-top: 80px;
             padding: 20px;
@@ -83,8 +83,9 @@ if (isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['password']))
         <button type="reset" class="btn btn-danger">Effacer</button>
 
     </form>
+    <br>
+    <a href="index.php"><button type="button" class="btn btn-danger">retour</button></a>
 
-    
 </body>
 
 </html>
