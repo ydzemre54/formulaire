@@ -24,7 +24,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     } catch (Exception $e) {
         $erreurLog = $e->getMessage();
     }
-   
 }
 
 ?>
