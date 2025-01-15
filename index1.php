@@ -41,7 +41,7 @@ if (isset($_SESSION["username"])) {
    
     <div align="center" class="card" style="width: 24rem;">
         <div class="card-body">
-            <h5 class="card-title">Connexion ou Inscription requise</h5>
+            <h5 class="card-title">accedez à la page secrète!</h5>
             <br>
             <a href="register.php"><button type="button" class="btn btn-success">Inscription</button></a>
             <a href="logout.php"><button type="button" class="btn btn-success">déconnexion</button></a>
