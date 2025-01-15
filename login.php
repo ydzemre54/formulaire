@@ -7,17 +7,17 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $user = 'root';
         $password = hash('sha256', $_POST['password']);
         $username = $_POST['username'];
-    
+
         $dbh = new PDO($dsn, $user, '');
-        $sql='SELECT id from utilisateurs where username = :username and mot_de_passe =:password';
-        $query = $dbh -> prepare($sql);
-        $query -> execute([
-            'username'=>$username,
-            'password'=>$password,
+        $sql = 'SELECT id from utilisateurs where username = :username and mot_de_passe =:password';
+        $query = $dbh->prepare($sql);
+        $query->execute([
+            'username' => $username,
+            'password' => $password,
         ]);
-        $user = $query-> fetch();
+        $user = $query->fetch();
         if ($user == false) {
-            throw new Exception("Utilisateur introuvable");    
+            throw new Exception("Utilisateur introuvable");
         }
         $_SESSION['username'] = $_POST['username'];
         header('location: index1.php');
@@ -44,12 +44,16 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             background-color: rgb(170, 170, 170);
         }
 
-        form{
+        form {
             font-weight: bold;
             margin-top: 80px;
             padding: 20px;
             border: solid 2px black;
             border-radius: 10px;
+        }
+
+        #err{
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -73,6 +77,16 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         <input type="submit">
         <input type="reset">
     </form>
+    <?php
+    if ($erreurLog != false) {
+    ?>
+        <div class="alert alert-danger" role="alert" id="err">
+            <?php echo $erreurLog;
+            ?>
+        </div>
+    <?php
+    }
+    ?>
 </body>
 
 </html>
