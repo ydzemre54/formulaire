@@ -22,6 +22,11 @@
             background-color: rgb(56, 56, 56);
             color: white;
         }
+
+        h6{
+            font-weight: bold;
+            font-size: 30px;
+        }
     </style>
 </head>
 
@@ -32,7 +37,7 @@ session_start();
 
 if (isset($_SESSION["username"])) {
     ?>
-    <h5>Bienvenue, <?php echo $_SESSION["username"];?>!</h5>
+    <h6>Bienvenue, <?php echo $_SESSION["username"];?>!</h6>
     <?php
 }
 ?>
