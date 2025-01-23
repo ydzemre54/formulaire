@@ -1,3 +1,16 @@
 <?php
+namespace App\controller;
 
-class HomeController{}
+class HomeController implements ControllerInterface {
+
+    public function __construct() {}
+
+
+    public function doGET(): void{
+
+    }
+
+    public function doPOST(): void{}
+
+
+}

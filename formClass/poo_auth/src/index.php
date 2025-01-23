@@ -1,16 +1,18 @@
 <?php
 require_once(__DIR__ . '/../vendor/autoload.php');
 
-$dotenv = \Dotenv\Dotenv::createimmutable(paths: "../");
+$dotenv = Dotenv\Dotenv::createimmutable(paths: "../");
 $dotenv->load();
 
 use App\Router;
+use App\controller\LoginController;
+use App\controller\HomeController;
 use App\controller;
 
 $router = new Router();
 
 
-$router->addRoute(route: "home", controller: new HomeController());
+$router->addRoute( "home",  new HomeController());
 
 $router->delegate();
 
