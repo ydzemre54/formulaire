@@ -1,4 +1,19 @@
 <?php
+require_once(__DIR__ . '/../vendor/autoload.php');
+
+$dotenv = \Dotenv\Dotenv::createimmutable(paths: "../");
+$dotenv->load();
+
+use App\Router;
+use App\controller\HomeController;
+
+$router = new Router();
+
+
+$router->addRoute(route: "home", controller: new HomeController());
+
+$router->delegate();
+
 
 require_once("./controller/ControllerInterface.php");
 require_once("./AffichableInterface.php");
