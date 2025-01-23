@@ -7,7 +7,8 @@ $dotenv->load();
 use App\Router;
 use App\controller\LoginController;
 use App\controller\HomeController;
-use App\controller;
+use App\controller\RegisterController;
+
 
 $router = new Router();
 
