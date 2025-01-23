@@ -1,3 +1,7 @@
 <?php
 
-class LoginController{}
+class LoginController{
+    public function create (){
+
+    }
+}
