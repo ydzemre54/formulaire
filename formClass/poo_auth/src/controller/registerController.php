@@ -3,14 +3,14 @@
 
 namespace App\controller;
 
-class RegisterController implements ControllerInterface {
+class RegisterController implements ControllerInterface
+{
     public function __construct() {}
 
-    public function doGET(): void{
-
+    public function doGET(): void
+    {
+        include('formClass/poo_auth/src/view/register.html');
     }
 
-    public function doPOST(): void{}
-
-
+    public function doPOST(): void {}
 }
