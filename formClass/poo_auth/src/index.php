@@ -5,7 +5,7 @@ $dotenv = \Dotenv\Dotenv::createimmutable(paths: "../");
 $dotenv->load();
 
 use App\Router;
-use App\controller\HomeController;
+use App\controller;
 
 $router = new Router();
 
