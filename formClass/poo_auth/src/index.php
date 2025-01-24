@@ -8,12 +8,16 @@ use App\Router;
 use App\controller\LoginController;
 use App\controller\HomeController;
 use App\controller\RegisterController;
+use App\controller\LogoutController;
 
 
 $router = new Router();
 
 
 $router->addRoute( "home",  new HomeController());
+$router->addRoute( "login",  new LoginController());
+$router->addRoute( "register",  new RegisterController());
+$router->addRoute( "logout",  new LogoutController());
 
 $router->delegate();
 

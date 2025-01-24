@@ -1,16 +1,17 @@
 <?php
+
 namespace App\controller;
 
-class HomeController implements ControllerInterface {
+class HomeController implements ControllerInterface
+{
 
     public function __construct() {}
 
 
-    public function doGET(): void{
-
+    public function doGET(): void
+    {
+        include('');
     }
 
-    public function doPOST(): void{}
-
-
+    public function doPOST(): void {}
 }
